@@ -8,54 +8,60 @@
 </head>
 <body>
 	<header>
-		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 offset-lg-1">
-					<div class="header__phone d-flex align-items-lg-center">
+				<div class="col-xl-1 offset-xl-2 d-flex">
+					<div class="headline__text align-self-xl-center">Сад Мастер Landscape</div>
+				</div>
+				<div class="col-xl-3">
+					<div class="header__phone d-flex align-items-xl-center">
 						<img class="phone__icon" src="img/circle.svg" alt="phone">
-						<div class="phone__number">+7(846)277-15-39</div>
-						<div class="phone__number">+7(846)972-40-49</div>
+						<div class="phone__number__one">+7(846)277-15-39</div>
+						<div class="phone__number__two">+7(846)972-40-49</div>
 					</div>
 				</div>
-				<div class="col-lg-3 offset-lg-3">
-					<div class="list__buy d-flex align-items-lg-center">
+				<div class="col-xl-2 offset-xl-4">
+					<div class="list__buy d-flex align-items-xl-center">
 						<div class="list__text">Список покупок</div>
 						<div class="list__counter d-flex justify-content-center">2</div>
 						<img src="img/icon.svg" alt="" class="list__icon">
 					</div>
 				</div>
 			</div>
-		</div>
 	</header>
 
-	<div class="menu d-flex">
-		<div class="container">
-			<div class="row menu d-flex">
+	<div class="menu__headline">
+			<div class="row">
+				<div class="col-xl-2 ">
 					<div class="headline__logo"><img src="img/logo.png" alt="Лого"></div>
-				<div class="col-lg-3 offset-lg-2 d-flex align-items-center">
-					<div class="headline__text">Сад Мастер Landscape</div>
 				</div>
-				<div class="col-lg-2 offset-lg-5 d-flex align-items-center">
-					<div class="headline__menu">
-						<div class="menu__text">МЕНЮ</div>
-						<img class="menu__img" src="img/interface.svg" alt="Меню">
-					</div>
+				<div class="col-xl-12">
+					<nav class="menu__nav d-flex ">
+						<li class="nav__item">Главная</li>
+						<li class="nav__item">О нас</li>
+						<li class="nav__item">Наши работы</li>
+						<li class="nav__item">Услуги</li>
+						<li class="nav__item">Каталог</li>
+						<li class="nav__item">Контакты</li>
+						<li class="nav__item">Прайс лист</li>
+						<li class="nav__item">Статьи</li>
+						<li class="nav__item">Акции и спецпердложения</li>
+					</nav>
 				</div>
 			</div>
-		</div>
 	</div>
 
+<!--Слайдер-->
 <div class="main">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-xl-12">
 				<div class="main__slider">
 					<h1 class="slider__headline">Программа обработки сада</h1>
 				</div>
 			</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-10">
+				<div class="col-xl-10">
 					<div class="main__text">
 						<div class="slider__text"><h4>Очень важно обработать не одно растение в саду, а все растения на
 							участке. Важным является и то, что обработку желательно <br> проводить и на соседних участках</h4></div>
@@ -64,53 +70,91 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-3 offset-lg-4">
+				<div class="col-xl-3 offset-xl-4">
 					<div class="main__read">
 						<div class="slider__read">ЧИТАТЬ ДАЛЬШЕ</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </div>
-	<section class="features">
-		<div class="container">
-			<div class="row">
-		<div class="features__item">
-			<div class="col-lg-2">
-				<div class="item__basket d-flex align-items-center">
-					<img src="img/basket.png" alt="Корзина">
-					<div class="item__text">БОЛЬШОЙ АССОРТИМЕНТ</div>
-				</div>
-			</div>
-		</div>
-			<div class="col-lg-2">
-				<div class="item__price">
-					<img src="img/priceGood.png" alt="Приятная цена">
-					<div>ПРИЯТНАЯ ЦЕНА</div>
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="item__warranty">
-					<img src="img/warranty.png" alt="Гарантия">
-					<div>ГАРАНТИЯ КАЧЕСТВА РАБОТЫ</div>
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="item__material">
-					<img src="img/goodMaterial.png" alt="Лучшие материалы">
-					<div>ЛУЧШИЕ МАТЕРИАЛЫ</div>
-				</div>
-			</div>
-			<div class="col-lg-2">
-				<div class="item__material">
-					<img src="img/sadCenter.png" alt="Садовый центр">
-					<div>УНИВЕРСАЛЬНЫЙ САДОВЫЙ ЦЕНТР</div>
-				</div>
-			</div>
 
-		</div>
+<!--Плюсы-->
+	<section class="features">
+			<div class="row text-center">
+
+				<div class="col-xl-2 features__item">
+					<div class="item__ring">
+						<img class="ring__img" src="img/basket.png" alt="Корзина">
+					</div>
+					<div class="item__text">БОЛЬШОЙ <br /> АССОРТИМЕНТ</div>
+				</div>
+
+				<div class="col-xl-2 col-sm-6 features__item">
+					<div  class="item__ring">
+						<img class="ring__img" src="img/priceGood.png" alt="Приятная цена">
+					</div>
+					<div class="item__text">ПРИЯТНАЯ <br /> ЦЕНА</div>
+				</div>
+
+				<div class="col-xl-2 features__item">
+					<div class="item__ring">
+						<img class="ring__img" src="img/warranty.png" alt="Гарантия">
+					</div>
+					<div class="item__text">ГАРАНТИЯ <br /> КАЧЕСТВА РАБОТЫ</div>
+				</div>
+
+				<div class="col-xl-2 features__item">
+					<div class="item__ring">
+						<img class="ring__img" src="img/goodMaterial.png" alt="Лучшие материалы">
+					</div>
+					<div class="item__text">ЛУЧШИЕ <br /> МАТЕРИАЛЫ</div>
+				</div>
+
+				<div class="col-xl-2 features__item">
+					<div class="item__ring">
+						<img class="ring__img" src="img/sadCenter.png" alt="Садовый центр">
+					</div>
+					<div class="item__text">УНИВЕРСАЛЬНЫЙ <br /> САДОВЫЙ ЦЕНТР</div>
+				</div>
+			</div>
 	</section>
+
+<!--О компании-->
+	<section class="about__company">
+			<div class="row">
+				<div class="col-xl-6">
+					<div class="headline__company">О компании</div>
+					<p class="text__company">ГК "Сад Мастер Landscape" - это объединение опыта и работы первоклассных <br /> специалистов, и качественных материалов.</p>
+					<p class="text__company">На нашем сайте в разделе "Каталог" вы можете найти множество <br /> сопутствующих товаров, плодовые, ягодные, хваойные, декоративные <br /> культуры, удобрения, и других товаров для своего сада.</p>
+					<p class="text__company">Весь посадочный материал из лучших российских питомников.</p>
+					<div class="company__btn text-center">
+						<div class="catalog__in">ПЕРЕЙТИ В КАТАЛОГ</div>
+					</div>
+				</div>
+				<div class="col-xl-4 d-flex align-items-center justify-content-center">
+					<img class="about__img" src="img/strawberry.png" alt="">
+				</div>
+			</div>
+	</section>
+
+	<div class="menu__footer">
+		<div class="row">
+			<div class="col-xl-12">
+				<nav class="menu__footer d-flex">
+					<li class="nav__item">Главная</li>
+					<li class="nav__item">О нас</li>
+					<li class="nav__item">Наши работы</li>
+					<li class="nav__item">Услуги</li>
+					<li class="nav__item">Каталог</li>
+					<li class="nav__item">Контакты</li>
+					<li class="nav__item">Прайс лист</li>
+					<li class="nav__item">Статьи</li>
+					<li class="nav__item">Акции и спецпердложения</li>
+				</nav>
+			</div>
+		</div>
+	</div>
 <!--Scripts-->
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
