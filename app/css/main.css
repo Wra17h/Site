@@ -55,20 +55,19 @@ header {
   color: black;
   margin: 0 10px 0 -65px; }
 
-.menu__nav, .menu__footer {
+.menu__nav, .nav__footer {
   color: white;
   font-family: "Roboto Black";
   font-size: 15px;
-  display: inline-block;
   list-style-type: none;
   margin: 0 0 0 330px; }
 
-.nav__item {
+.nav__item, .footer__nav {
   padding: 21px 15px 21px 15px;
   border-left: 1px solid #ff8555;
   cursor: pointer; }
 
-.nav__item:last-child {
+.nav__item:last-child, .footer__nav:last-child {
   border-right: 1px solid #ff8555; }
 
 .menu__img {
@@ -162,3 +161,46 @@ hr {
 
 .menu__footer {
   height: 43px; }
+
+.nav__footer {
+  margin: 0 0 0 0; }
+
+.footer__nav {
+  padding: 10px 10px 10px 10px;
+  border: 0;
+  font-family: "Roboto Light";
+  font-size: 15px; }
+  .footer__nav:last-child {
+    border-right: 0; }
+
+.footer__associate {
+  background: url(../img/bac_associate.png) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover; }
+
+.associate__headline, .headline__part {
+  color: white;
+  font-size: 35px;
+  font-family: "Roboto Light";
+  margin: 20px 0 20px 0; }
+
+.headline__part {
+  font-family: "Roboto Black"; }
+
+.associate__text {
+  color: white;
+  font-size: 20px;
+  font-family: "Roboto Medium";
+  margin: 0 0 24px 0; }
+
+.footer__text {
+  font-size: 12px;
+  font-family: "Roboto Light";
+  color: #a0a2a3;
+  margin: 64px 0 60px 0; }
+
+.footer__btn {
+  width: 47px;
+  height: 47px;
+  background: url(../img/arrow_up.svg);
+  background-color: #68d935; }
