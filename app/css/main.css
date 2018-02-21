@@ -133,13 +133,13 @@ hr {
 .about__company {
   background-color: #f0f5f9; }
 
-.headline__company {
+.headline__company, .headline__opportunity {
   color: #ff6123;
   font-size: 45px;
   font-family: "Roboto Medium";
   margin: 0 0 0 80px; }
 
-.text__company {
+.text__company, .text__opportunity {
   font-size: 20px;
   font-family: "Roboto Light";
   margin: 30px 0 0 80px;
@@ -203,4 +203,68 @@ hr {
   width: 47px;
   height: 47px;
   background: url(../img/arrow_up.svg);
-  background-color: #68d935; }
+  background-color: #68d935;
+  cursor: pointer; }
+
+.opportunity {
+  background-color: #f0f5f9; }
+
+.text__opportunity {
+  margin: 30px 0 35px 80px; }
+  .text__opportunity:last-child {
+    margin: 0 0 60px 80px; }
+
+.opportunity__img {
+  -webkit-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+          transform: scale(1.3); }
+
+.opportunity__text {
+  margin: 0 0 0 120px; }
+
+.opportunity__quote {
+  margin: 66px 0 80px 111px;
+  font-family: "Roboto Light";
+  font-size: 25px;
+  font-style: italic;
+  position: relative;
+  z-index: 0; }
+  .opportunity__quote:after {
+    content: url(../img/quote-rgt.png);
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 58px;
+    left: 611px; }
+  .opportunity__quote:before {
+    content: url(../img/quote-lft.png);
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    left: -31px; }
+
+.youtube__video {
+  background: url(../img/ytb-bgc.png) no-repeat center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  height: 385px; }
+
+.ytb__left, .ytb__right {
+  width: 68px;
+  height: 95px;
+  background-color: #ff6123;
+  cursor: pointer; }
+
+.arrow__left {
+  -webkit-transform: scale(0.4);
+      -ms-transform: scale(0.4);
+          transform: scale(0.4); }
+
+.btn__left {
+  padding: 0; }
+
+.arrow__right {
+  -webkit-transform: scale(0.4) rotate(180deg);
+      -ms-transform: scale(0.4) rotate(180deg);
+          transform: scale(0.4) rotate(180deg); }

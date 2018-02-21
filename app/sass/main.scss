@@ -251,4 +251,88 @@ hr {
   height: 47px;
   background: url(../img/arrow_up.svg);
   background-color: #68d935;
+  cursor: pointer;
+  }
+
+.opportunity {
+  background-color: #f0f5f9;
+  }
+
+.headline__opportunity {
+  @extend .headline__company;
+  }
+
+.text__opportunity {
+  @extend .text__company;
+  margin: 30px 0 35px 80px;
+  &:last-child {
+    margin: 0 0 60px 80px;
+    }
+  }
+
+.opportunity__img {
+  transform: scale(1.3);
+  }
+
+.opportunity__text {
+  margin: 0 0 0 120px;
+  }
+
+.opportunity__quote {
+  margin: 66px 0 80px 111px;
+  font-family: $rbLight;
+  font-size: 25px;
+  font-style: italic;
+  position: relative;
+  z-index: 0;
+  &:after {
+    content: url(../img/quote-rgt.png);
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 58px;
+    left: 611px;
+    }
+  &:before {
+    content: url(../img/quote-lft.png);
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    left: -31px;
+    }
+  }
+
+.youtube__video {
+  background: url(../img/ytb-bgc.png) no-repeat center;
+  background-size: cover;
+  height: 385px;
+  }
+
+.ytb__left {
+  width: 68px;
+  height: 95px;
+  background-color: #ff6123;
+  cursor: pointer;
+  //margin: 50px 0 0 0;
+  }
+
+.arrow__left {
+  transform: scale(.4);
+  }
+
+.btn__left {
+  padding:0;
+  }
+
+.ytb__right {
+  @extend .ytb__left;
+  }
+
+.btn__right {
+
+  }
+
+.arrow__right {
+  transform: scale(.4) rotate(180deg);
   }
