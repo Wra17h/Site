@@ -10,6 +10,11 @@ header {
   margin: 14px 0 14px 0;
   }
 
+.container-fluid {
+  padding-right: 0;
+  }
+
+
 .row {
   margin-right: 0;
   }
@@ -303,9 +308,13 @@ hr {
     }
   }
 
-.youtube__video {
+.youtube {
   background: url(../img/ytb-bgc.png) no-repeat center;
   background-size: cover;
+  }
+
+.youtube__video {
+
   height: 385px;
   }
 
@@ -314,23 +323,18 @@ hr {
   height: 95px;
   background-color: #ff6123;
   cursor: pointer;
-  //margin: 50px 0 0 0;
   }
 
 .arrow__left {
-  transform: scale(.4);
+  transform: scale(.4) rotate(0deg);
   }
 
-.btn__left {
-  padding:0;
+.btn__right {
+  padding-right: 0;
   }
 
 .ytb__right {
   @extend .ytb__left;
-  }
-
-.btn__right {
-
   }
 
 .arrow__right {
