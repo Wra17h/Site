@@ -2,6 +2,12 @@ $rbMedium: "Roboto Medium";
 $rbBold: "Roboto Black";
 $rbLight: "Roboto Light";
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+    }
+  }
+
 body {
   font-family: "Roboto", sans-serif;
   }
@@ -13,7 +19,6 @@ header {
 .container-fluid {
   padding-right: 0;
   }
-
 
 .row {
   margin-right: 0;
@@ -72,7 +77,6 @@ header {
 .headline__logo {
   position: absolute;
   top: -60px;
-  left: 142px;
   }
 
 .headline__text {
@@ -87,17 +91,19 @@ header {
   font-family: $rbBold;
   font-size: 15px;
   list-style-type: none;
-  margin: 0 0 0 330px;
+  margin: 0 0 0 200px;
   }
 
 .nav__item {
-  padding: 21px 15px 21px 15px;
+  padding: 22px 12px 21px 13px;
   border-left: 1px solid #ff8555;
   cursor: pointer;
+  &:hover {
+    box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.32);
   }
-
-.nav__item:last-child {
-  border-right: 1px solid #ff8555;
+  &:first-child {
+    border-left: 0;
+    }
   }
 
 .menu__img {
@@ -109,11 +115,15 @@ header {
   background-size: cover;
   width: 100%;
   height: 669px;
-  z-index: -1;
+  z-index: 1;
+  }
+
+.item {
+  background-color: rgba(0,0,0,.3);
+  height: 100%;
   }
 
 .slider__headline {
-  margin: 103px 0 22px -180px;
   color: white;
   font-family: $rbLight;
   font-size: 45px;
@@ -133,6 +143,7 @@ hr {
   width: 380px;
   }
 
+
 .main__read {
   background-color: #ff6123;
   border-radius: 22px;
@@ -142,6 +153,11 @@ hr {
   text-align: center;
   font-size: 18px;
   cursor: pointer;
+  box-shadow: 0 3px 9px rgba(0,0,0,0.32);
+  transition: all .2s;
+  &:hover {
+    background-color: lighten(#ff6123, 4%);
+    }
   }
 
 .item__ring {
@@ -150,18 +166,27 @@ hr {
   width: 165px;
   height: 164px;
   display: inline-block;
+  position: relative;
   }
 
 .features__item {
-  margin: 60px 0 57px 38px;
+  margin: 60px 0 60px 50px;
+  max-width: 20.66667%;
+  &:first-child {
+    margin-left: 0;
+    }
   }
 
 .ring__img {
-  margin: 30% 0 0 0;
+  //margin: 30% 0 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   }
 
 .item__text {
-  margin: 25px 0 0 0;
+  margin-top: 20px;
   line-height: 25px;
   font-size: 17px;
   font-family: $rbBold;
@@ -175,28 +200,30 @@ hr {
   color: #ff6123;
   font-size: 45px;
   font-family: $rbMedium;
-  margin: 0 0 0 80px;
   }
 
 .text__company {
-  font-size: 20px;
+  font-size: 19px;
   font-family: $rbLight;
-  margin: 30px 0 0 80px;
+  margin: 30px 0 0 0;
   color: #222;
   }
 
 .company__btn {
   @extend .main__read;
-  margin: 30px 0 60px 80px;
+  margin: 30px 0 60px 0;
   background-color: #68d935;
   height: 44px;
   width: 233px;
   border-radius: 50px;
   cursor: pointer;
+  &:hover {
+    background-color: darken(#68d935, 5%);
+    }
   }
 
 .about__img {
-  transform: scale(1.5);
+  transform: scale(1.2);
   }
 
 .menu__footer {
@@ -215,9 +242,6 @@ hr {
   border: 0;
   font-family: $rbLight;
   font-size: 15px;
-    &:last-child {
-      border-right: 0;
-      }
   }
 
 .footer__associate {
@@ -252,11 +276,15 @@ hr {
   }
 
 .footer__btn {
-  width: 47px;
-  height: 47px;
-  background: url(../img/arrow_up.svg);
+  width: 70px;
+  height: 70px;
   background-color: #68d935;
   cursor: pointer;
+  }
+
+.footer__arrow {
+  transform: scale(.4);
+  position: absolute;
   }
 
 .opportunity {
@@ -265,6 +293,7 @@ hr {
 
 .headline__opportunity {
   @extend .headline__company;
+  margin-left: 80px;
   }
 
 .text__opportunity {
@@ -277,10 +306,11 @@ hr {
 
 .opportunity__img {
   transform: scale(1.3);
+  margin: 15% 0 0 0;
   }
 
 .opportunity__text {
-  margin: 0 0 0 120px;
+  font-size: 20px;
   }
 
 .opportunity__quote {
@@ -290,22 +320,22 @@ hr {
   font-style: italic;
   position: relative;
   z-index: 0;
-  &:after {
-    content: url(../img/quote-rgt.png);
-    display: inline-block;
-    position: absolute;
-    z-index: -1;
-    top: 58px;
-    left: 611px;
-    }
-  &:before {
-    content: url(../img/quote-lft.png);
-    display: inline-block;
-    position: absolute;
-    z-index: -1;
-    top: -16px;
-    left: -31px;
-    }
+  }
+
+.quote__left {
+  position: absolute;
+  transform: scale(.023);
+  opacity: .5;
+  top: -840px;
+  left: -1004px;
+  z-index: -1;
+  }
+
+.quote__right {
+  @extend .quote__left;
+  transform: scale(.023) rotate(180deg);
+  top: -762px;
+  left: -356px;
   }
 
 .youtube {
@@ -323,10 +353,17 @@ hr {
   height: 95px;
   background-color: #ff6123;
   cursor: pointer;
+  &:hover {
+    background-color: darken(#ff6123, 5%);
+    }
   }
 
 .arrow__left {
   transform: scale(.4) rotate(0deg);
+  }
+
+.arrow__right {
+  transform: scale(.4) rotate(180deg);
   }
 
 .btn__right {
@@ -337,6 +374,14 @@ hr {
   @extend .ytb__left;
   }
 
-.arrow__right {
-  transform: scale(.4) rotate(180deg);
+.main__left {
+  @extend .ytb__left;
+  background-color: rgba(0,0,0,.3);
+  &:hover {
+    background-color: #000;
+    }
+  }
+
+.main__right {
+  @extend .main__left;
   }
