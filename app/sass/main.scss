@@ -8,8 +8,37 @@ $rbLight: "Roboto Light";
     }
   }
 
+//Подключение шрифтов
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 400;
+  }
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/roboto/Roboto-Medium.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 500;
+  }
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/roboto/Roboto-Light.ttf") format("ttf");
+  font-weight: 300;
+  }
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../fonts/roboto/Roboto-Bold.ttf")format("ttf");
+  font-style: normal;
+  font-weight: bold;
+  }
+//End include font
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Regular", sans-serif;
   }
 
 header {
@@ -77,6 +106,7 @@ header {
 .headline__logo {
   position: absolute;
   top: -60px;
+  z-index: 1;
   }
 
 .headline__text {
@@ -110,12 +140,10 @@ header {
   margin: -2px 0 0 3px;
   }
 
-.main {
-  background: url(../img/slider_img.png) no-repeat center center;
-  background-size: cover;
+.slider__up {
   width: 100%;
-  height: 669px;
-  z-index: 1;
+  height: 668px;
+  z-index: 0;
   }
 
 .item {
@@ -178,7 +206,6 @@ hr {
   }
 
 .ring__img {
-  //margin: 30% 0 0 0;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -324,58 +351,89 @@ hr {
 
 .quote__left {
   position: absolute;
-  transform: scale(.023);
+  transform: scale(.1);
   opacity: .5;
-  top: -840px;
-  left: -1004px;
+  fill: #68d935;
+  top: -224px;
+  left: -254px;
   z-index: -1;
+  width: 480px;
+  height: 440px;
   }
 
 .quote__right {
   @extend .quote__left;
-  transform: scale(.023) rotate(180deg);
-  top: -762px;
-  left: -356px;
+  transform: scale(.1) rotate(180deg);
+  top: -145px;
+  left: 393px;
   }
 
 .youtube {
-  background: url(../img/ytb-bgc.png) no-repeat center;
-  background-size: cover;
+  height: 500px;
   }
 
-.youtube__video {
-
-  height: 385px;
+.slider__down {
+  height: 500px;
   }
 
-.ytb__left {
+//Кнопки верхнего слайдера
+.slider__up .owl-next {
+  @extend .owl-prev;
+  left: 1835px;
+  }
+
+.slider__up .owl-prev {
+  width: 68px;
+  height: 95px;
+  background-color: rgba(0,0,0,.5);
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  &:hover {
+    background-color: rgba(0,0,0,.8);
+    }
+  }
+
+//Положение кнопок на нижнем слайдере
+.slider__down .owl-next {
+  @extend .owl-prev;
+  left: 1835px;
+  }
+
+.youtube .owl-prev {
   width: 68px;
   height: 95px;
   background-color: #ff6123;
   cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
   &:hover {
     background-color: darken(#ff6123, 5%);
     }
   }
 
 .arrow__left {
-  transform: scale(.4) rotate(0deg);
+  position: absolute;
+  transform: translate(0, -50%) scale(.6) rotate(0deg);
+  top: 50%;
   }
 
 .arrow__right {
-  transform: scale(.4) rotate(180deg);
+  transform: translate(0, -50%) scale(.6) rotate(180deg);
+  position: absolute;
+  top: 50%;
   }
+//End slider button pos
 
 .btn__right {
   padding-right: 0;
   }
 
-.ytb__right {
-  @extend .ytb__left;
-  }
-
 .main__left {
-  @extend .ytb__left;
+  @extend .owl-next;
   background-color: rgba(0,0,0,.3);
   &:hover {
     background-color: #000;
@@ -384,4 +442,64 @@ hr {
 
 .main__right {
   @extend .main__left;
+  }
+
+//Стили для проявления точек
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  }
+
+.owl-dot {
+  background-color: #D6D6D6;
+  margin: 15px 10px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  &:hover {
+    background-color: #869791;
+    }
+  }
+
+.active {
+  background-color: #869791;
+  }
+
+.inner-img {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  }
+
+//Высота слайдера вверху
+.slider__up .owl-item img {
+  height: 668px;
+  }
+
+//Высота слайдера внизу
+.slider__down .owl-item img {
+  height: 500px;
+  }
+
+//Магнифик попап верхнего сладйера
+.slider__up > a {
+  display: none;
+  &:first-child {
+    display: block;
+    }
+  }
+
+.slider__down > a{
+  @extend .slider__up;
+  }
+
+.slider__up a[class="popup-youtube"] {
+  display: block;
+  &:focus {
+    outline: none;
+    }
   }
