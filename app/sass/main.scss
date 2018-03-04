@@ -1,6 +1,4 @@
-$rbMedium: "Roboto Medium";
-$rbBold: "Roboto Black";
-$rbLight: "Roboto Light";
+$rbRegular: "Roboto-Regular";
 
 @media (min-width: 1200px) {
   .container {
@@ -10,36 +8,47 @@ $rbLight: "Roboto Light";
 
 //Подключение шрифтов
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/roboto/Roboto-Regular.ttf") format("ttf");
+  font-family: "Roboto-Regular";
+  src:  url("../fonts/roboto/Roboto-Regular.ttf")  format("truetype");
+        //url('Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        //url('Roboto-Regular.woff') format('woff'),
+        //url('Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
   }
 
-@font-face {
-  font-family: "Roboto Medium";
-  src: url("../fonts/roboto/Roboto-Medium.ttf") format("ttf");
-  font-style: normal;
-  font-weight: 500;
-  }
 
-@font-face {
-  font-family: "Roboto Light";
-  src: url("../fonts/roboto/Roboto-Light.ttf") format("ttf");
-  font-weight: 300;
-  }
-
-@font-face {
-  font-family: "Roboto Bold";
-  src: url("../fonts/roboto/Roboto-Bold.ttf")format("ttf");
-  font-style: normal;
-  font-weight: bold;
-  }
+//@font-face {
+//  font-family: 'Roboto-Regular';
+//  src:  url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype');
+//  font-weight: 400;
+//  font-style: normal;
+//  }
+//
+//@font-face {
+//  font-family: 'Roboto-Regular';
+//  src:  url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype');
+//  font-weight: 500;
+//  font-style: normal;
+//  }
+//
+//@font-face {
+//  font-family: 'Roboto-Regular';
+//  src:  url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype');
+//  font-weight: 300;
+//  }
+//
+//@font-face {
+//  font-family: 'Roboto-Regular';
+//  src:  url('../fonts/roboto/Roboto-Regular.ttf')  format('truetype');
+//  font-weight: bold;
+//  font-style: normal;
+//  }
 //End include font
 
-body {
-  font-family: "Roboto Regular", sans-serif;
-  }
+//body {
+//  font-family: "Roboto-Regular", sans-serif;
+//  }
 
 header {
   margin: 14px 0 14px 0;
@@ -54,7 +63,8 @@ header {
   }
 
 .header__text {
-  font-family: $rbMedium;
+  font-family: $rbRegular;
+  font-weight: 500;
   font-size: 15px;
   }
 
@@ -68,8 +78,9 @@ header {
   }
 
 .list__text {
+  font-family: $rbRegular;
+  font-weight: 500;
   font-size: 15px;
-  font-family: $rbMedium;
   }
 
 .phone__number__one {
@@ -111,14 +122,16 @@ header {
 
 .headline__text {
   font-size: 15px;
-  font-family: $rbMedium;
+  font-weight: 500;
+  font-family: $rbRegular;
   color: black;
   margin: 0 10px 0 -65px;
   }
 
 .menu__nav {
   color: white;
-  font-family: $rbBold;
+  font-family: $rbRegular;
+  font-weight: bold;
   font-size: 15px;
   list-style-type: none;
   margin: 0 0 0 200px;
@@ -144,23 +157,27 @@ header {
   width: 100%;
   height: 668px;
   z-index: 0;
+  position: relative;
   }
 
 .item {
   background-color: rgba(0,0,0,.3);
   height: 100%;
+  position: relative;
   }
 
 .slider__headline {
   color: white;
-  font-family: $rbLight;
+  font-family: $rbRegular;
+  font-weight: 300;
   font-size: 45px;
   text-align: center;
   }
 
 .slider__text {
   color: white;
-  font-family: $rbLight;
+  font-family: $rbRegular;
+  font-weight: 300;
   font-size: 20px;
   text-align: center;
   line-height: 25px;
@@ -216,7 +233,8 @@ hr {
   margin-top: 20px;
   line-height: 25px;
   font-size: 17px;
-  font-family: $rbBold;
+  font-weight: bold;
+  font-family: $rbRegular;
   }
 
 .about__company {
@@ -226,12 +244,14 @@ hr {
 .headline__company {
   color: #ff6123;
   font-size: 45px;
-  font-family: $rbMedium;
+  font-weight: 500;
+  font-family: $rbRegular;
   }
 
 .text__company {
   font-size: 19px;
-  font-family: $rbLight;
+  font-weight: 300;
+  font-family: $rbRegular;
   margin: 30px 0 0 0;
   color: #222;
   }
@@ -267,7 +287,8 @@ hr {
   @extend .nav__item;
   padding: 10px 10px 10px 10px;
   border: 0;
-  font-family: $rbLight;
+  font-family: $rbRegular;
+  font-weight: 300;
   font-size: 15px;
   }
 
@@ -279,25 +300,29 @@ hr {
 .associate__headline {
   color: white;
   font-size: 35px;
-  font-family: $rbLight;
+  font-weight: 300;
+  font-family: $rbRegular;
   margin: 20px 0 20px 0;
   }
 
 .headline__part {
   @extend .associate__headline;
-  font-family: $rbBold;
+  font-family: $rbRegular;
+  font-weight: bold;
   }
 
 .associate__text {
   color: white;
   font-size: 20px;
-  font-family: $rbMedium;
+  font-weight: 500;
+  font-family: $rbRegular;
   margin: 0 0 24px 0;
   }
 
 .footer__text {
   font-size: 12px;
-  font-family: $rbLight;
+  font-weight: 300;
+  font-family: $rbRegular;
   color: #a0a2a3;
   margin: 64px 0 60px 0;
   }
@@ -342,7 +367,8 @@ hr {
 
 .opportunity__quote {
   margin: 66px 0 80px 111px;
-  font-family: $rbLight;
+  font-family: $rbRegular;
+  font-weight: 300;
   font-size: 25px;
   font-style: italic;
   position: relative;
@@ -368,21 +394,17 @@ hr {
   left: 393px;
   }
 
-.youtube {
-  height: 500px;
-  }
+//.youtube {
+//  height: 500px;
+//  }
 
 .slider__down {
   height: 500px;
   }
 
 //Кнопки верхнего слайдера
-.slider__up .owl-next {
-  @extend .owl-prev;
-  left: 1835px;
-  }
 
-.slider__up .owl-prev {
+.up__left {
   width: 68px;
   height: 95px;
   background-color: rgba(0,0,0,.5);
@@ -390,18 +412,21 @@ hr {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  cursor: pointer;
+  z-index: 1;
   &:hover {
     background-color: rgba(0,0,0,.8);
     }
   }
 
-//Положение кнопок на нижнем слайдере
-.slider__down .owl-next {
-  @extend .owl-prev;
-  left: 1835px;
+.up__right {
+  @extend .up__left;
+  transform: translate(-100%, -50%);
+  left: 100%;
   }
 
-.youtube .owl-prev {
+//Положение кнопок на нижнем слайдере
+.down__left {
   width: 68px;
   height: 95px;
   background-color: #ff6123;
@@ -410,10 +435,18 @@ hr {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  z-index: 2;
   &:hover {
     background-color: darken(#ff6123, 5%);
     }
   }
+
+.down__right {
+  @extend .down__left;
+  transform: translate(-100%, -50%);
+  left: 100%;
+  }
+
 
 .arrow__left {
   position: absolute;
@@ -430,18 +463,6 @@ hr {
 
 .btn__right {
   padding-right: 0;
-  }
-
-.main__left {
-  @extend .owl-next;
-  background-color: rgba(0,0,0,.3);
-  &:hover {
-    background-color: #000;
-    }
-  }
-
-.main__right {
-  @extend .main__left;
   }
 
 //Стили для проявления точек
@@ -486,20 +507,24 @@ hr {
   }
 
 //Магнифик попап верхнего сладйера
-.slider__up > a {
-  display: none;
-  &:first-child {
-    display: block;
-    }
-  }
-
-.slider__down > a{
-  @extend .slider__up;
-  }
-
-.slider__up a[class="popup-youtube"] {
+.slider__up a{
   display: block;
   &:focus {
     outline: none;
+    border: 0;
     }
+  }
+
+.slider__down a{
+  display: block;
+  &:focus {
+    outline: none;
+    border: 0;
+    }
+  }
+
+.slider__shadow {
+  height: 100%;
+  background: url(../img/shadow.png) center center no-repeat;
+  background-color: rgba(0,0,0,0.3);
   }
