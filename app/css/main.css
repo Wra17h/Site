@@ -3,9 +3,27 @@
     max-width: 1170px; } }
 
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: "Roboto";
+  src: local("Roboto-Light"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Medium"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
   font-style: normal; }
 
 header {
@@ -18,7 +36,7 @@ header {
   margin-right: 0; }
 
 .header__text {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 15px; }
 
@@ -29,7 +47,7 @@ header {
   margin-left: 12px; }
 
 .list__text, .phone__number__one, .phone__number__two {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 15px; }
 
@@ -64,13 +82,13 @@ header {
 .headline__text {
   font-size: 15px;
   font-weight: 500;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   color: black;
   margin: 0 10px 0 -65px; }
 
 .menu__nav, .nav__footer {
   color: white;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: bold;
   font-size: 15px;
   list-style-type: none;
@@ -79,7 +97,10 @@ header {
 .nav__item, .footer__nav {
   padding: 22px 12px 21px 13px;
   border-left: 1px solid #ff8555;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
   .nav__item:hover, .footer__nav:hover {
     -webkit-box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.32);
             box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.32); }
@@ -102,14 +123,14 @@ header {
 
 .slider__headline {
   color: white;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: 300;
   font-size: 45px;
   text-align: center; }
 
 .slider__text {
   color: white;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: 300;
   font-size: 20px;
   text-align: center;
@@ -131,9 +152,9 @@ hr {
   cursor: pointer;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 9px rgba(0, 0, 0, 0.32);
-  -webkit-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s; }
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease; }
   .main__read:hover, .company__btn:hover {
     background-color: #ff7037; }
 
@@ -165,7 +186,7 @@ hr {
   line-height: 25px;
   font-size: 17px;
   font-weight: bold;
-  font-family: "Roboto-Regular"; }
+  font-family: "Roboto"; }
 
 .about__company {
   background-color: #f0f5f9; }
@@ -174,12 +195,12 @@ hr {
   color: #ff6123;
   font-size: 45px;
   font-weight: 500;
-  font-family: "Roboto-Regular"; }
+  font-family: "Roboto"; }
 
 .text__company, .text__opportunity {
   font-size: 19px;
   font-weight: 300;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   margin: 30px 0 0 0;
   color: #222; }
 
@@ -208,7 +229,7 @@ hr {
 .footer__nav {
   padding: 10px 10px 10px 10px;
   border: 0;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: 300;
   font-size: 15px; }
 
@@ -221,24 +242,24 @@ hr {
   color: white;
   font-size: 35px;
   font-weight: 300;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   margin: 20px 0 20px 0; }
 
 .headline__part {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: bold; }
 
 .associate__text {
   color: white;
   font-size: 20px;
   font-weight: 500;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   margin: 0 0 24px 0; }
 
 .footer__text {
   font-size: 12px;
   font-weight: 300;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   color: #a0a2a3;
   margin: 64px 0 60px 0; }
 
@@ -276,7 +297,7 @@ hr {
 
 .opportunity__quote {
   margin: 66px 0 80px 111px;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-weight: 300;
   font-size: 25px;
   font-style: italic;
@@ -301,7 +322,7 @@ hr {
       -ms-transform: scale(0.1) rotate(180deg);
           transform: scale(0.1) rotate(180deg);
   top: -145px;
-  left: 393px; }
+  left: 407px; }
 
 .slider__down {
   height: 500px; }
