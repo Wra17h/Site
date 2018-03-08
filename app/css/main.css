@@ -1,3 +1,15 @@
+@media (min-width: 576px) {
+  .container {
+    max-width: 480px; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px; } }
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px; } }
@@ -442,3 +454,12 @@ hr {
   height: 100%;
   background: url(../img/shadow.png) center center no-repeat;
   background-color: rgba(0, 0, 0, 0.3); }
+
+[class*="youtube"]:after {
+  content: url("../img/ytb-play.png");
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
