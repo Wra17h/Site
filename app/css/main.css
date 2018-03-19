@@ -42,9 +42,9 @@
     -webkit-background-size: cover;
             background-size: cover; }
   .features__item {
-    margin: 30px 0; }
+    margin: 60px 0; }
   .offset-md-3 {
-    margin-left: 30%; }
+    margin-left: 27%; }
   .offset-md-2 {
     margin-left: 20.66667%; }
   .offset-md-1 {
@@ -56,7 +56,24 @@
     width: 128px;
     height: 128px;
     display: inline-block;
-    position: relative; } }
+    position: relative; }
+  .footer__arrow {
+    -webkit-transform: scale(0.03);
+        -ms-transform: scale(0.03);
+            transform: scale(0.03);
+    position: absolute; }
+  .footer__text {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto";
+    color: #a0a2a3;
+    margin: 27px 0 15px 0; }
+  .footer__btn {
+    margin: 12px 0 27px 0;
+    width: 47px;
+    height: 47px;
+    background-color: #68d935;
+    cursor: pointer; } }
 
 @media (min-width: 992px) {
   .container {
@@ -118,7 +135,23 @@
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
-    margin-left: -80px; } }
+    margin-left: -80px; }
+  .footer__arrow {
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4);
+    position: absolute; }
+  .footer__text {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto";
+    color: #a0a2a3;
+    margin: 64px 0 60px 0; }
+  .footer__btn {
+    width: 47px;
+    height: 47px;
+    background-color: #68d935;
+    cursor: pointer; } }
 
 @media (min-width: 1200px) {
   .container {
@@ -175,7 +208,23 @@
   .opportunity__img {
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
-            transform: scale(1.2); } }
+            transform: scale(1.2); }
+  .footer__arrow {
+    -webkit-transform: scale(0.4);
+        -ms-transform: scale(0.4);
+            transform: scale(0.4);
+    position: absolute; }
+  .footer__text {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto";
+    color: #a0a2a3;
+    margin: 64px 0 60px 0; }
+  .footer__btn {
+    width: 47px;
+    height: 47px;
+    background-color: #68d935;
+    cursor: pointer; } }
 
 @font-face {
   font-family: "Roboto";
@@ -388,25 +437,6 @@ hr {
   font-weight: 500;
   font-family: "Roboto";
   margin: 0 0 24px 0; }
-
-.footer__text {
-  font-size: 12px;
-  font-weight: 300;
-  font-family: "Roboto";
-  color: #a0a2a3;
-  margin: 64px 0 60px 0; }
-
-.footer__btn {
-  width: 47px;
-  height: 47px;
-  background-color: #68d935;
-  cursor: pointer; }
-
-.footer__arrow {
-  -webkit-transform: scale(0.4);
-      -ms-transform: scale(0.4);
-          transform: scale(0.4);
-  position: absolute; }
 
 .opportunity {
   background-color: #f0f5f9; }
